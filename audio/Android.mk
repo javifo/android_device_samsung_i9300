@@ -26,8 +26,10 @@ LOCAL_C_INCLUDES += \
 	external/tinyalsa/include \
 	external/expat/lib \
 	$(call include-path-for, audio-utils) \
-	$(call include-path-for, audio-effects)
+	$(call include-path-for, audio-effects) \
+	$(call include-path-for, audio-route)
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa libaudioutils libdl libexpat
+LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa libaudioutils libdl libexpat \
+	libaudioroute
 
 include $(BUILD_SHARED_LIBRARY)
